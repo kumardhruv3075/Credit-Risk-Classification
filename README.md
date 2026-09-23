@@ -3,7 +3,7 @@ A machine learning project for predicting whether a loan applicant represents Go
 
 The project compares multiple classification algorithms and evaluates them using Accuracy, Precision, Recall, F1-Score, AUC-ROC, and Confusion Matrices. Random Forest is further tuned using GridSearchCV, with Recall treated as the primary metric because identifying potentially risky borrowers is important in credit-risk applications.
 
-📌 Project Overview
+# Project Overview
 
 Credit risk classification is a binary classification problem in which the objective is to estimate whether a loan applicant is likely to be a good or bad credit risk.
 
@@ -11,14 +11,15 @@ This project implements an end-to-end machine learning workflow:
 
 Data Generation/Collection → Exploratory Data Analysis → Preprocessing → Feature Engineering → Model Training → Hyperparameter Tuning → Model Evaluation → Feature Importance → Business Interpretation
 
-Objective
+# Objective
 
 Build and compare machine learning models that can classify loan applicants based on their credit-related characteristics.
 
 Target
 0 → Good Credit Risk
 1 → Bad Credit Risk
-📂 Project Structure
+
+ # Project Structure
 Credit-Risk-Classification/
 │
 ├── Data Folder/
@@ -47,7 +48,8 @@ Credit-Risk-Classification/
 │   └── Technical_Report_Dhruv.pdf
 │
 └── README.md
-🛠️ Technologies Used
+
+# Technologies Used
 Python
 Pandas — Data manipulation
 NumPy — Numerical computation
@@ -57,7 +59,8 @@ Scikit-learn — Machine learning
 XGBoost — Gradient boosting classification
 MLflow — Experiment tracking and model logging
 Jupyter Notebook / Google Colab
-📊 Dataset
+
+# Dataset
 
 The project uses credit-related applicant information containing features such as:
 
@@ -75,7 +78,7 @@ Risk	Target variable
 
 The project also performs preprocessing to handle missing values and categorical variables.
 
-🔎 Exploratory Data Analysis
+# Exploratory Data Analysis
 
 The project analyzes the distribution of credit-risk classes and examines relationships between applicant characteristics and risk.
 
@@ -85,7 +88,7 @@ The distribution of the Risk variable is visualized to understand the number of 
 
 The project also generates visualizations for model evaluation and feature importance.
 
-⚙️ Data Preprocessing
+# Data Preprocessing
 
 The following preprocessing steps are performed:
 
@@ -128,7 +131,7 @@ The dataset is divided into:
 
 using a fixed random state for reproducibility.
 
-🤖 Machine Learning Models
+# Machine Learning Models
 
 Four classification algorithms are implemented and compared.
 
@@ -152,7 +155,8 @@ RandomForestClassifier(random_state=42)
 A gradient boosting algorithm that builds an ensemble of sequential decision trees.
 
 XGBClassifier(random_state=42)
-🎯 Hyperparameter Tuning
+
+# Hyperparameter Tuning
 
 Random Forest is further optimized using GridSearchCV with 5-fold cross-validation.
 
@@ -175,7 +179,7 @@ GridSearchCV(
 
 The best model is then logged using MLflow.
 
-📈 Model Evaluation
+# Model Evaluation
 
 The models are evaluated using multiple classification metrics.
 
@@ -199,7 +203,7 @@ AUC-ROC
 
 Measures the model's ability to distinguish between the two risk classes across different classification thresholds.
 
-📊 Evaluation Visualizations
+# Evaluation Visualizations
 
 The project generates:
 
@@ -219,7 +223,7 @@ Feature Importance
 
 The Random Forest model is used to identify the features that contribute most strongly to its predictions.
 
-💼 Business Interpretation
+# Business Interpretation
 
 In a credit-risk application, Recall is particularly important because failing to identify a genuinely risky applicant can result in financial losses.
 
@@ -227,7 +231,7 @@ Therefore, the project gives particular attention to reducing False Negatives.
 
 The project evaluates the models not only from a statistical perspective but also from a business perspective, considering the potential cost of incorrect credit-risk decisions.
 
-🧪 Experiment Tracking
+# Experiment Tracking
 
 MLflow is used to track the Random Forest hyperparameter-tuning experiment.
 
@@ -237,7 +241,7 @@ Credit_Risk_Classification_Dhruv
 
 The best Random Forest parameters are logged along with the trained model.
 
-💾 Saved Models
+# Saved Models
 
 Pre-trained models are provided in the Models Folder:
 
@@ -248,14 +252,14 @@ xgboost.pkl
 
 These models can be loaded using Python's joblib or pickle depending on how the model files were serialized.
 
-🚀 How to Run the Project
+# How to Run the Project
 1. Clone the Repository
-git clone <your-repository-url>
-cd Credit-Risk-Classification
+   git clone <your-repository-url>
+   cd Credit-Risk-Classification
 2. Install Dependencies
-pip install pandas numpy matplotlib seaborn scikit-learn xgboost mlflow jupyter
+   pip install pandas numpy matplotlib seaborn scikit-learn xgboost mlflow jupyter
 3. Start Jupyter Notebook
-jupyter notebook
+   jupyter notebook
 4. Run the Notebooks in Order
 
 Run the notebooks in the following sequence:
